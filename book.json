@@ -1,4 +1,8 @@
 {
+  "plugins": ["prism", "-highlight", "github", "heading-anchors", "image-captions", "richquotes"],
+  "pluginsConfig": {
+    "github": { "url": "https://github.com/deliciousinsights/installations-formations" }
+  },
   "structure": {
     "readme": "intro.md"
   }
