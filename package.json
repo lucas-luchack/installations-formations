@@ -21,6 +21,7 @@
   "homepage": "https://github.com/deliciousinsights/installations-formations#readme",
   "devDependencies": {
     "gitbook": "^2.6.7",
+    "gitbook-plugin-advanced-emoji": "^0.1.6",
     "gitbook-plugin-github": "^2.0.0",
     "gitbook-plugin-heading-anchors": "^1.0.3",
     "gitbook-plugin-image-captions": "^0.3.4",
