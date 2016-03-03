@@ -11,3 +11,8 @@
     - [Sublime Text 3 & plugins](software/st3.md)
     - [MongoDB](software/mongodb.md)
     - [Divers](software/misc.md)
+* [Se préparer](prepare/index.md)
+    - [Ligne de commande](prepare/cli.md)
+    - [Sublime Text](prepare/st.md)
+    - [JavaScript](prepare/js.md)
+    - [Dev Tools](prepare/devtools.md)
