@@ -3,10 +3,11 @@
 FIXME
 
 <!-- 
-
+Alfred 2
+Caffeine
 Divvy
 F.lux
-CrashPlan ?
-(voir la liste dans Applications)
-
+GifGrabber
+ImageOptim
+Robomongo
  -->
