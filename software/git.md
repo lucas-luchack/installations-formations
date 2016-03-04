@@ -91,14 +91,14 @@ brew install git
 
 Il ne te reste plus qu’à [configurer ton Git correctement](#finaliser-ta-configuration-git)…
 
-#### Vous aviez déjà Homebrew ?
+#### Tu avais déjà Homebrew ?
 
 Pense à mettre à jour sa liste de formules avant d’installer ou de mettre à jour Git :
 
 ```bash
 brew update
 …
-brew install git # ou brew upgrade git, si vous aviez déjà Git
+brew install git # ou brew upgrade git, si tu avais déjà Git
 ```
 
 Voici par exemple à quoi ressemble une mise à jour de Git via Homebrew :

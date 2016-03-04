@@ -2,7 +2,7 @@
 
 ![](../images/logos-st.png)
 
-## C’est quoi, Sublime Text ?
+## C’est quoi Sublime Text ?
 
 [Sublime Text](http://www.sublimetext.com/) (ou “Sublime” pour faire court) est un **éditeur portable** (OSX, Linux, Windows) **extrêmement puissant et rapide**, qui est devenu **incontournable** dans l’univers des développeurs.
 

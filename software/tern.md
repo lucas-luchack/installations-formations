@@ -2,7 +2,7 @@
 
 :point_right: [Vite, la config !](#configuration-du-serveur-ternjs) :point_left:
 
-## C’est quoi, TernJS ?
+## C’est quoi TernJS ?
 
 **JavaScript est un langage extrêmement dynamique**, et il existe des *tonnes* de façons de modifier un objet, directement ou indirectement ; on peut remplacer son prototype à la volée, modifier l’existant, toucher à un objet le long de sa chaîne de prototypes, modifier un descripteur de propriété, utiliser une boucle d’affectation de propriétés par indexation indirecte, ou `Object.assign`, ou le *object spread* d’ES7+, et tout ça sans compter les imports et exports entre modules, et d’autres formes encore.
 
