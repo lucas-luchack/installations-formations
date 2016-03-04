@@ -9,6 +9,7 @@
     - [Git](software/git.md)
     - [Node & npm](software/node.md)
     - [Sublime Text 3 & plugins](software/st3.md)
+        + [TernJS](software/tern.md)
     - [MongoDB](software/mongodb.md)
     - [Divers](software/misc.md)
 * [Se préparer](prepare/index.md)
