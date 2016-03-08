@@ -61,7 +61,7 @@ Toutefois, cette version a généralement du retard, et surtout elle n’est pas
 
 La première façon consiste à utiliser [l’installeur officiel](http://git-scm.com/download/mac), pour l’installation initiale comme pour la mise à jour.
 
-Toutefois, **cette méthode n’est pas idéale**, car la mise à jour nécessite à chaque fois de re-télécharger l’installeur et de l’exécuter à nouveau, et les éventuelles personnalisations associées (complétion, etc.) ne sont pas toujours simple sà mettre en œuvre.
+Toutefois, **cette méthode n’est pas idéale**, car la mise à jour nécessite à chaque fois de re-télécharger l’installeur et de l’exécuter à nouveau, et les éventuelles personnalisations associées (complétion, etc.) ne sont pas toujours simples à mettre en œuvre.
 
 Nous te recommandons donc plutôt l’approche Homebrew.
 

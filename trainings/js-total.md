@@ -6,7 +6,7 @@ Ah, notre **best-seller**…  En plus, depuis sa version 2016, elle est revenue 
 
 Il te faudra :
 
-1. **[Git](../software/git.md)**, pour récupérer la base de **code de départ** et pouvoir **naviguer entre les étapes** si tu décides de ne pas toutes les faire toi-même, ou si tu es trop empêtré-e dans une d’elles et veut t’en sortir en un clin d’œil.
+1. **[Git](../software/git.md)**, pour récupérer la base de **code de départ** et pouvoir **naviguer entre les étapes** si tu décides de ne pas toutes les faire toi-même, ou si tu es trop empêtré-e dans une d’elles et veux t’en sortir en un clin d’œil.
 2. **[Node & npm](../software/node.md)**, pour **gérer et installer les dépendances** à de multiples outils, modules et bibliothèques JS dont tu auras besoin (par exemple, Webpack, React, Redux et Babel, pour ne citer qu’eux).
 
 ## Installations recommandées
