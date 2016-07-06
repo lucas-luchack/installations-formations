@@ -22,6 +22,8 @@ Grâce à un **énorme écosystème de plugins**, il offre une intégration fine
 
 [Atom](http://atom.io/) est un projet très intéressant d’éditeur open-source, basé sur Electron, et piloté par GitHub.  Il mérite carrément qu’on garde un œil dessus mais pour le moment, **il est trop lent et crashe trop souvent**.
 
+Mais si tu veux vraiment l’utiliser, [fais quelques ajustements à ton Atom](./atom.md).
+
 ### Sublime vs. TextMate
 
 [TextMate](https://macromates.com/) est un éditeur spécifiquement pour OSX qui a connu une énorme popularité lors de l’émergence de Ruby On Rails.  Il a clairement **servi de référence** lors de la conception de Sublime, qui a repris une grande partie de ses fonctionnalités, raccourcis claviers, et son mécanisme de plugins (la plupart des plugins TextMate sont utilisables tels quels sur ST2, parfois aussi sur ST3).
@@ -52,6 +54,8 @@ C’est vraiment pas mal, mais ça reste **trop basique** pour nombre de besoins
 
 Ça reste intéressant à surveiller, mais pour le moment, **Sublime est loin devant**.
 
+Mais si tu veux vraiment l’utiliser, [fais quelques ajustements à ton Code](./code.md).
+
 ### Sublime vs. Brackets
 
 En 2013, Adobe a lancé un projet d’éditeur 100% orienté web assez innovant : [Brackets](http://brackets.io/).  Le développement ralentit un peu depuis la mi-2015, mais on y trouve pas mal **d’UI innovantes** (édition entrelacée CSS, etc.) qui en font un bon terrain d’expérimentation en termes de fonctionnalités d’édition.
@@ -69,6 +73,8 @@ L’inconvénient, outre qu’ils sont souvent payants—et **chers**—c’est 
 Je veux dire, tu as mesuré le temps, le processeur et la mémoire de tes derniers lancements Eclipse ou NetBeans ?!
 
 Si tu as bien l’habitude de ton EDI et que tu y trouves tous les outils de l’état de l’art (cf. liste des paquets recommandés plus bas), tant mieux !  Sinon, c’est peut-être l’occasion de **tenter autre chose**, en alternative ?
+
+Mais si tu veux vraiment utiliser WebStorm ou PHPStorm, [fais quelques ajustements à ton EDI](./storms.md).
 
 ## ST2 vs. ST3
 

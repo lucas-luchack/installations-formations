@@ -13,6 +13,10 @@
     "setup",
     "installation"
   ],
+  "scripts": {
+    "start": "gitbook serve",
+    "deploy": "surge --project _book --domain installations.delicious-insights.com"
+  },
   "author": "Christophe Porteneuve <christophe@delicious-insights.com>",
   "license": "CC-BY-NC-SA-4.0",
   "bugs": {
