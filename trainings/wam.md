@@ -1,14 +1,13 @@
-# Node.js
+# Web Apps Modernes
 
-Bravo !  Au mépris du retard ahurissant qu’affiche la France sur Node.js, tu es parvenu-e à venir à cette formation qui fait frétiller les neurones.  En plus, depuis 2016 elle est 100% basée ES2015+, avec du `async`/`await` et tout…  Il faut bien avouer que [le programme est alléchant](https://delicious-insights.com/fr/formations/node-js/#program)…
+Ah, notre **best-seller**…  En plus, depuis sa version 2016, elle est revenue à la toute **pointe de la technologie** avec ES2015–2018, Babel, React, Redux, Webpack, les *Service Workers*, et j'en passe !  [Un vrai programme de rêve](https://delicious-insights.com/fr/formations/web-app-modernes/#program)…
 
 ## Installations obligatoires
 
 Il te faudra :
 
 1. **[Git](../software/git.md)**, pour récupérer la base de **code de départ** et pouvoir **naviguer entre les étapes** si tu décides de ne pas toutes les faire toi-même, si tu es trop empêtré-e dans une d’elles et veux t’en sortir en un clin d’œil, ou simplement pour récupérer du code de début d’étape ou d’exercice.
-2. **[Node & npm](../software/node.md)**, parce que, euh, quand même, c’est une formation **Node**, tu vois.
-3. **[MongoDB](../software/mongodb.md)**, car nous allons l’utiliser comme **base de données *NoSQL*** pour la persistence de nos données chéries.
+2. **[Node & npm](../software/node.md)**, pour **gérer et installer les dépendances** à de multiples outils, modules et bibliothèques JS dont tu auras besoin (par exemple, Webpack, React, Redux et Babel, pour ne citer qu’eux).
 
 ## Installations recommandées
 

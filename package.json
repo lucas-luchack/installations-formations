@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "start": "gitbook serve",
-    "deploy": "surge --project _book --domain installations.delicious-insights.com"
+    "deploy": "surge --project _book --domain https://installations.delicious-insights.com"
   },
   "author": "Christophe Porteneuve <christophe@delicious-insights.com>",
   "license": "CC-BY-NC-SA-4.0",
@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/deliciousinsights/installations-formations#readme",
   "devDependencies": {
-    "gitbook": "^2.6.7",
-    "gitbook-plugin-advanced-emoji": "^0.1.9",
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-advanced-emoji": "^0.2.2",
     "gitbook-plugin-github": "^2.0.0",
     "gitbook-plugin-heading-anchors": "^1.0.3",
-    "gitbook-plugin-image-captions": "^2.0.0",
-    "gitbook-plugin-prism": "^1.0.0",
-    "gitbook-plugin-richquotes": "0.0.7"
+    "gitbook-plugin-image-captions": "^3.1.0",
+    "gitbook-plugin-prism": "^2.3.0",
+    "gitbook-plugin-richquotes": "0.0.9"
   }
 }

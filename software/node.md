@@ -10,15 +10,15 @@ De la même manière qu’on peut faire tourner d’autres langages sur la JVM, 
 
 > **Info** Après beaucoup de temps passé en versions **0.10.x**, qui font encore aujourd’hui tourner la majorité du **Fortune 500**, l’écosystème Node a connu un **schisme** début 2015 en raison de la lenteur excessive des évolutions du noyau par un groupe étroit et fermé de développeurs chez Joyent, donnant naissance à **io.js**, lequel a immédiatement produit des versions majeures tous les 3 mois, jusqu’à la 3.0 à l’été 2015, fédérant des centaines de contributeurs.
 >
-> Au travers de l’été 2015, **io.js a atteint son objectif :** sortir Joyent de sa torpeur et avancer vers un modèle de gouvernance beaucoup plus ouvert et un **noyau unique beaucoup plus réactif**.  La **fondation Node** en est issue, depuis décembre 2015, et il n’existe donc plus qu’un noyau, très actif, et doté de versions LTS (*Long-Term Support*) pour les projets stratégiques et les grosses entreprises.  Une version majeure sort tous les 6 à 9 mois ; avril 2016 va voir arriver Node 6.0.
-> 
+> Au travers de l’été 2015, **io.js a atteint son objectif :** sortir Joyent de sa torpeur et avancer vers un modèle de gouvernance beaucoup plus ouvert et un **noyau unique beaucoup plus réactif**.  La **fondation Node** en est issue, depuis décembre 2015, et il n’existe donc plus qu’un noyau, très actif, et doté de versions LTS (*Long-Term Support*) pour les projets stratégiques et les grosses entreprises.  Une version majeure sort tous les 6 mois, en avril et octobre ; le 31 octobre 2017 verra ainsi arriver Node 9.0, et la 8.x deviendra la LTS active.
+>
 > ![Le planning LTS de Node](https://raw.githubusercontent.com/nodejs/LTS/master/schedule.png)
 
 ## Version minimale requise
 
-Même si Node 0.10 est extrêmement stable, vu qu’elle cessera d’être maintenue le 1er octobre 2016 il est conseillé d’utiliser *a minima* **la dernière version LTS** (jusqu’en avril 2017, c’est la branche **4.x**, soit début mars 2016 la 4.3.2).
+Même si Node 0.10 est extrêmement stable, vu qu’elle cessera d’être maintenue le 1er octobre 2016 il est conseillé d’utiliser *a minima* **la dernière version LTS** (du 31 octobre 2017 à décembre 2019, c’est la branche **8.x**, soit au 23 octobre 2017 la 8.7.0).
 
-Si tu es sur des projets expérimentaux, ou que tu as confiance dans la capacité des mainteneurs de ton projet à **mettre à jour** sur la dernière version Node stable au fil du temps, tu peux aussi utiliser la **dernière version stable**.  Début mars 2016, c’est la branche 5.x (la 5.7.1), et la **6.0** arrivera début avril.
+Si tu es sur des projets expérimentaux, ou que tu as confiance dans la capacité des mainteneurs de ton projet à **mettre à jour** sur la dernière version Node stable au fil du temps, tu peux aussi utiliser la **dernière version stable**.  À partir du 31 octobre 2017, ce sera par exemple la **9.0**.
 
 L’avantage de suivre les versions stables, c’est qu’elles ont les meilleures performances et sont le plus à jour sur les nouveautés du langage (ES2015, ES2016, etc.).
 

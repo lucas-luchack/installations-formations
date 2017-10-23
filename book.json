@@ -1,8 +1,18 @@
 {
-  "gitbook": "2.x",
-  "plugins": ["prism", "-highlight", "github", "heading-anchors", "image-captions", "richquotes", "advanced-emoji"],
+  "gitbook": "3.x",
+  "plugins": [
+    "prism",
+    "-highlight",
+    "github",
+    "heading-anchors",
+    "image-captions",
+    "richquotes",
+    "advanced-emoji"
+  ],
   "pluginsConfig": {
-    "github": { "url": "https://github.com/deliciousinsights/installations-formations" },
+    "github": {
+      "url": "https://github.com/deliciousinsights/installations-formations"
+    },
     "image-captions": {
       "align": "left",
       "caption": "_CAPTION_"

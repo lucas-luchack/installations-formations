@@ -8,37 +8,40 @@ C’est un **gestionnaire de sources**, un peu comme Subversion, mais en 300 00
 
 ## Version minimale requise
 
-Il est impératif d’utiliser **au grand minimum la version 1.8.5, plutôt une 2.x, et de préférence la dernière version mineure sortie**.  Par exemple, à l’heure où nous écrivons ceci (2 mars 2016), c’est la 2.7.2, qui remonte au 22 février.
+Il est impératif d’utiliser **au grand minimum la version 1.8.5, plutôt une 2.x, et de préférence la dernière version mineure sortie**.  Par exemple, à l’heure où nous mettons à jour cette page (23 octobre 2017), c’est la 2.14.3, qui remonte à… ce matin 😳.
 
 Aller directement aux instructions pour…
 
-* [Windows](#sur-windows)
+* [Windows (hors Subsystem for Linux)](#sur-windows)
 * [OSX](#sur-osx)
-* [Linux](#sur-linux)
+* [Linux (ou Windows Subsystem for Linux)](#sur-linux)
 
 ## Sur Windows
 
-Depuis l’automne 2015, Git for Windows est enfin au taquet par rapport à ses confrères OSX et Linux…  Ouf !
+Depuis l’automne 2015, Git for Windows est enfin au taquet (à deux-trois semaines près…) par rapport à ses confrères OSX et Linux…  Ouf !
 
 1. [Télécharge la dernière version de l’installeur officiel](https://git-scm.com/download/win).  Vérifie bien, si tu es sur un Windows 64-bit, que ça récupère la 64-bit, sinon annule le téléchargement et choisis le lien approprié sur la page (si tu as les droits d’installation, préfère la version normale à la version « portable »).
 2. Lance l’installeur, et suis les étapes…
     1. Commence par accepter la licence
     2. Tant qu’à faire, ajoute les icônes sur le bureau (*“On the Desktop”*)
     3. Choisis de pouvoir utiliser Git tant depuis le *Git Bash* que depuis les invites de commande Windows normales (*“Use Git from the Windows Command Prompt”*)
-    4. Laisse la conversion automatique Windows/Unix des fins de ligne (*“Checkout Windows-style, commit Unix-style line endings”*)
-    5. Laisse le terminal mieux foutu proposé, MinTTY (*“Use MinTTY (the default terminal of MSYS2)”*)
-    6. Assure-toi que la mise en cache du système de fichiers est active (ça compense un peu le ralentissement dû à l’émulation interne) (*“Enable file system caching”*)
+    4. Pour la gestion SSL/TLS, tout dépend de tes besoins : si tu as un hébergement Git interne avec des certificats gérés par l’autorité de certificats Windows locale à ton SI, préfères *“Use the native Windows Secure Channel library”*.  Sinon, reste sur OpenSSL.
+    5. Laisse la conversion automatique Windows/Unix des fins de ligne (*“Checkout Windows-style, commit Unix-style line endings”*)
+    6. Laisse le terminal mieux foutu proposé, MinTTY (*“Use MinTTY (the default terminal of MSYS2)”*)
+    7. Assure-toi que la mise en cache du système de fichiers est active (ça compense un peu le ralentissement dû à l’émulation interne) (*“Enable file system caching”*), et que tu t’intègres à la gestion d’authentification native (*“Enable Git Credential Manager”*, surtout si tu comptes faire du Git avec Visual Studio ou GitHub Desktop à un moment donné).  **Seulement si tu as les droits administrateur** sur ta machine, rends-toi service et active les liens symboliques aussi (*“Enable symbolic links”*).
     7. On se fout des *Release Notes*, sur ce coup.
 
 ![Ajoute les icônes sur le Bureau](../images/gitwin-install-settings.png)
 
 ![Ajoute Git au PATH global](../images/gitwin-install-path.png)
 
+![OpenSSL ou Native Secure Channel ? Tout dépend de ton usage projeté…](../images/gitwin-install-ssl-tls.png)
+
 ![Laisse la conversion automatique des fins de ligne](../images/gitwin-install-line-endings.png)
 
 ![Laisse le terminal MinTTY, mieux foutu](../images/gitwin-install-terminal.png)
 
-![Mets le système de fichiers en cache](../images/gitwin-install-fscache.png)
+![Mets le système de fichiers en cache et intègre la gestion d’authentification native](../images/gitwin-install-fscache.png)
 
 ![Et hop Git Bash est là !](../images/gitwin-install-desktop-icon.png)
 
@@ -50,7 +53,7 @@ Il te reste à [configurer ton Git correctement](#finaliser-ta-configuration-git
 
 Depuis OSX Lion, OSX inclue un Git, pas nécessairement ancien…  Ainsi, avec Yosemite, on a une 2.4.9 :
 
-```console
+```
 $ /usr/bin/git --version
 git version 2.4.9 (Apple Git-60)
 ```
@@ -67,7 +70,7 @@ Nous te recommandons donc plutôt l’approche Homebrew.
 
 ### Option 2 : Homebrew
 
-[Homebrew](http://brew.sh/) est **indispensable pour tous les développeurs utilisant OSX**.  C’est un gestionnaire de paquets qui nous donne accès, facilement et de façon homogène, à la grande majorité des outils Linux / Unix, qu’il s’agisse d’outils « clients », comme Git, ou serveurs, comme MySQL, PostgreSQL, MongoDB, Redis ou que sais-je encore…
+[Homebrew](https://brew.sh/) est **indispensable pour tous les développeurs utilisant OSX**.  C’est un gestionnaire de paquets qui nous donne accès, facilement et de façon homogène, à la grande majorité des outils Linux / Unix, qu’il s’agisse d’outils « clients », comme Git, ou serveurs, comme MySQL, PostgreSQL, MongoDB, Redis ou que sais-je encore…
 
 Homebrew nécessite Ruby pour s’installer, mais ce n’est pas un souci vu qu’un Ruby suffisamment récent fait partie d’OSX depuis très longtemps.
 
@@ -106,35 +109,31 @@ Voici par exemple à quoi ressemble une mise à jour de Git via Homebrew :
 ```
 $ brew ugrade git
 ==> Upgrading 1 outdated package, with result:
-git 2.7.2
+git 2.14.3
 ==> Upgrading git
-==> Downloading https://www.kernel.org/pub/software/scm/git/git-2.7.2.tar.xz
-######################################################################## 100.0%
-==> make install prefix=/opt/boxen/homebrew/Cellar/git/2.7.2 sysconfdir=/opt/boxen/homebrew/etc CC=clang CFLAGS= LDFLAGS= NO_OPENSSL=1 APPLE_COMMON_CRYPTO=1
+==> Downloading https://www.kernel.org/pub/software/scm/git/git-2.14.3.tar.xz
+######################################################################## 100,0%
+==> make install prefix=/opt/boxen/homebrew/Cellar/git/2.14.3 sysconfdir=/opt/boxen/homebrew/etc CC=clang CFLAGS= LDFLAGS= NO_OPENSSL=1 APPLE_COMMON_CRYPTO=1
 ==> make CC=clang CFLAGS= LDFLAGS=
 ==> make clean
+==> make
+==> make test
 ==> make CC=clang CFLAGS= LDFLAGS=
-==> Downloading https://www.kernel.org/pub/software/scm/git/git-manpages-2.7.2.tar.xz
-######################################################################## 100.0%
-==> Downloading https://www.kernel.org/pub/software/scm/git/git-htmldocs-2.7.2.tar.xz
-######################################################################## 100.0%
+==> Downloading https://www.kernel.org/pub/software/scm/git/git-manpages-2.14.3.tar.xz
+######################################################################## 100,0%
+==> Downloading https://www.kernel.org/pub/software/scm/git/git-htmldocs-2.14.3.tar.xz
+######################################################################## 100,0%
 ==> Caveats
-The OS X keychain credential helper has been installed to:
-  /opt/boxen/homebrew/bin/git-credential-osxkeychain
-
-The "contrib" directory has been installed to:
-  /opt/boxen/homebrew/share/git-core/contrib
-
 Bash completion has been installed to:
   /opt/boxen/homebrew/etc/bash_completion.d
 
-zsh completion has been installed to:
+zsh completions and functions have been installed to:
   /opt/boxen/homebrew/share/zsh/site-functions
 
 Emacs Lisp files have been installed to:
   /opt/boxen/homebrew/share/emacs/site-lisp/git
 ==> Summary
-🍺  /opt/boxen/homebrew/Cellar/git/2.7.2: 1,409 files, 236.4M, built in 55 seconds
+🍺  /opt/boxen/homebrew/Cellar/git/2.14.3: 1,486 files, 34.0MB, built in 1 minute 37 seconds
 ```
 
 Il ne te reste plus qu’à [configurer ton Git correctement](#finaliser-ta-configuration-git)…
@@ -143,11 +142,11 @@ Il ne te reste plus qu’à [configurer ton Git correctement](#finaliser-ta-conf
 
 Comme toujours avec Linux, **ça dépend de ta distro**.  L’immense majorité des utilisateurs de Linux dans nos formations utilisent une variante de Debian (Debian même, Ubuntu ou Mint).
 
-### Sur Debian / Ubuntu / Mint
+### Sur Debian / Ubuntu / Mint / WSL
 
-Afin d’être au taquet sur les dernières versions, il est largement préférable d’utiliser le [**PPA officiel**](https://launchpad.net/~git-core/+archive/ubuntu/ppa)[^1].  Si tu n’as jamais utilisé de PPA, voici des instructions détaillées.
+Afin d’être au taquet sur les dernières versions, il est largement préférable d’utiliser le [**PPA officiel**](https://launchpad.net/~git-core/+archive/ubuntu/ppa).  Si tu n’as jamais utilisé de PPA, voici des instructions détaillées.
 
-Il te faut d’abord vous assurer d’avoir la commande `add-apt-repository` disponible ; ce n’est pas le cas par défaut.  Fais ceci pour vérifier :
+Il te faut d’abord vous assurer d’avoir la commande `add-apt-repository` disponible ; ce n’est pas toujours le cas par défaut.  Fais ceci pour vérifier :
 
 ```
 $ add-apt-repository
@@ -194,7 +193,7 @@ Et voilà, tu peux maintenant installer Git :
 $ sudo apt-get install git
 …
 $ git --version
-git version 2.7.2
+git version 2.14.3
 ```
 
 Il ne te reste plus qu’à [configurer ton Git correctement](#finaliser-ta-configuration-git)…

@@ -1,8 +1,8 @@
 # Git Total
 
-Eh oui, toi aussi, la vague Git t’a rattrapée.  Il faut dire que ça fait déjà 10 ans que c’est sorti, et que même si en France le marché est encore majoritairement en Subversion (avec quelques pauvres âmes perdues dans les limbes de ClearCase…), il est plus que temps de s’y mettre, ne serait-ce que parce que GitHub.
+Eh oui, toi aussi, la vague Git t’a rattrapée.  Il faut dire que ça fait déjà 12 ans que c’est sorti, et que même si en France le marché est encore majoritairement en Subversion (avec quelques pauvres âmes perdues dans les limbes de ClearCase…), il est plus que temps de s’y mettre, ne serait-ce que parce que GitHub.
 
-Et puis, même si tu fais déjà du Git « sur le tas » depuis 2–3 ans, tu fais en fait, quasiment, du « SVN en Git », comme on dit.  Tu vas adorer [le programme très complet](http://www.js-attitude.fr/js-total/#programme) de cette formation, une référence mondiale sur le sujet !
+Et puis, même si tu fais déjà du Git « sur le tas » depuis 2–3 ans, tu fais en fait, quasiment, du « SVN en Git », comme on dit.  Tu vas adorer [le programme très complet](https://delicious-insights.com/fr/formations/git-total/#program) de cette formation, une référence mondiale sur le sujet !
 
 ## Installations obligatoires
 
@@ -14,4 +14,4 @@ Il te faudra :
 
 ## Installations recommandées
 
-1. **[Sublime Text 3 & plugins](../software/st3.md)**, pour éditer à la vitesse du son, naviguer facilement entre les fichiers du projet, bénéficier d’une **coloration à la pointe**, avoir une intégration Git décente, et plus encore !
+1. **[Visual Studio Code et des extensions](../software/vscode.md)**, pour éditer à la vitesse du son, naviguer facilement entre les fichiers du projet, bénéficier d’une **coloration à la pointe**, d’une **intégration Git décente**, et plus encore !
