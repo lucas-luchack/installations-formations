@@ -168,25 +168,31 @@ L’installation elle-même varie d’une distro à l’autre, mais ensuite le l
 
 #### Sur Ubuntu / Debian
 
-> **Caution** MongoDB ne fournit des paquets officiels que pour les versions 64-bit, en limitant aux deux dernières LTS d’Ubuntu (au 4 mars 2016, ce sont la 12.04 et la 14.04) et à la dernière Debian (Wheezy, là tout de suite).
+> **Caution** MongoDB ne fournit des paquets officiels que pour les versions 64-bit, en limitant aux trois dernières LTS d’Ubuntu (au 23 octobre 2017, ce sont la 12.04, la 14.04 et la 16.04) et les dernières Debian.
 
 Commence par ajouter la clé officielle de MongoDB à ton APT :
 
-```
-$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+```bash
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 ```
 
 Ensuite ajoute les sources du dépôt officiel MongoDB :
 
-```
+```bash
 # Pour du Ubuntu 12.04 :
-$ echo "deb http://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 
 # Pour du Ubuntu 14.04 :
-$ echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+
+# Pour du Ubuntu 16.04 :
+echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 
 # Pour du Debian Wheezy :
-$ echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+
+# Pour du Debian Jessie :
+echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 ```
 
 Et on recharge…
