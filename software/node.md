@@ -24,9 +24,9 @@ L’avantage de suivre les versions stables, c’est qu’elles ont les meilleur
 
 Aller directement aux instructions pour…
 
-* [Windows](#sur-windows)
+* [Windows (hors Subsystem for Linux)](#sur-windows)
 * [OSX](#sur-osx)
-* [Linux](#sur-linux)
+* [Linux (ou Windows Subsystem for Linux)](#sur-linux)
 
 ## Sur Windows
 
@@ -44,36 +44,35 @@ Ensuite exécute l’installeur :
 
 Comme tous les choix par défaut sont adaptés, on ne t’a pas mis les captures d’écran : fais juste *Next* à chaque fois :wink: et valide les demandes d’autorisation d’installation.
 
-Assure-toi ensuite [d’avoir npm 3.7 au minimum](#utiliser-le-dernier-npm).
+Assure-toi ensuite [d’avoir npm 5.3 au minimum](#utiliser-le-dernier-npm) (c’est sûr avec Node 8.7+, mais autant avoir le tout dernier).
 
 ### Option 2 : versions multiples avec NVM
 
-Si tu souhaites jouer entre les versions (par exemple les dernières 0.12, LTS et stable, pour des raisons de portabilité et de tests), le plus simple est de préférer l’approche [NVM pour Windows](https://github.com/coreybutler/nvm-windows#readme).
+Si tu souhaites jouer entre les versions (par exemple les dernières LTS, stable et *nightly*, pour des raisons de portabilité et de tests), le plus simple est de préférer l’approche [NVM pour Windows](https://github.com/coreybutler/nvm-windows#readme).
 
 NVM signifie *Node Version Manager*, et permet d’installer rapidement toute version connue, et de basculer d’une version à l’autre en fonction du projet.  Il y a même un installeur.  Voici comment procéder :
 
 1. Va sur la [liste des versions](https://github.com/coreybutler/nvm-windows/releases)
-2. Dans la plus récente, télécharge `nvm-setup.zip`
+2. Dans la plus récente (au 23 octobre 2017, c’est la 1.1.5), télécharge `nvm-setup.zip`
 3. Décompresse-le puis exécute le programme qu’il contient
 4. Accepte la licence et les chemins par défaut
 5. Si tu as déjà un Node global installé classiquement, nvm te demandera si tu veux qu’il prenne la main sur cette version aussi ; réponds *Yes*.
-6. Décoche la case *“Run cmd.exe”*
 
-NVM pour Windows nécessite une invite de commande executée en mode Administrateur.  Sur les Windows récents, il te suffit de cliquer bouton droit sur l’icône et de choisir “Run as Administrator”.  Tu peux alors juste taper `nvm` pour avoir l’aide, et `nvm ls` confirmera qu’il a pris en charge ta version globale précédente, le cas échéant :
+Tu peux alors ouvrir une invite de commande (`cmd.exe`) puis juste taper `nvm` pour avoir l’aide, et `nvm ls` confirmera qu’il a pris en charge ta version globale précédente, le cas échéant :
 
-![nvm exécuté en invite de commande Adminstrateur](../images/nvmw-help.png)
+![nvm exécuté en invite de commande](../images/nvmw-help.png)
 
 Pour savoir quelles versions sont disponibles, utilise `nvm ls available`.  Puis installe avec `nvm install la-version`.  Par exemple :
 
 ```
 nvm ls available
-nvm install 4.3.2
-nvm install 0.12.10
+nvm install 6.11.4
+nvm install 8.7
 ```
 
-![Installation de Node 4.3.2 avec NVM for Windows](../images/nvmw-v432.png)
+![Installation de Node 8.7.0 avec NVM for Windows](../images/nvmw-v870.png)
 
-Assure-toi ensuite [d’avoir npm 3.7 au minimum](#utiliser-le-dernier-npm).
+Assure-toi ensuite [d’avoir npm 5.3 au minimum](#utiliser-le-dernier-npm) (c’est sûr avec Node 8.7+, mais autant avoir le tout dernier).
 
 ## Sur OSX
 
@@ -87,7 +86,7 @@ Nous te recommandons donc plutôt l’approche NVM.
 
 ### Option 2 : NVM
 
-Si tu souhaites jouer entre les versions (par exemple les dernières 0.12, LTS et stable, pour des raisons de **portabilité** et de **tests**), le plus simple est de préférer l’approche [NVM](https://github.com/creationix/nvm#readme).
+Si tu souhaites jouer entre les versions (par exemple les dernières LTS, stable et *nightly*, pour des raisons de **portabilité** et de **tests**), le plus simple est de préférer l’approche [NVM](https://github.com/creationix/nvm#readme).
 
 NVM signifie *Node Version Manager*, et permet **d’installer rapidement toute version connue**, et de basculer d’une version à l’autre en fonction du projet.  Voici comment procéder.
 
@@ -96,66 +95,47 @@ Il faut déjà **avoir un compilateur** disponible sur la machine, ce qui est un
 Si tu n’a pas les **XCode Command Line Tools** installés, voici comment les obtenir gratuitement et rapidement (à partir de OSX Mountain Lion) :
 
 1. Ouvre *Terminal* (utilise la recherche système pour le trouver, sinon, il est dans Applications > Utilitaires)
-2. Tape `xcode-select -install`
+2. Tape `xcode-select --install`
 3. Clique *Install* (et **pas** *“Get Xcode”*)
 4. Laisse le téléchargement (~130 Mo) se faire
 5. Une fois l’installation terminée, tente une commande du style `gcc -v` dans le terminal : tu devrais voir un truc du genre *Apple LLVM version 7.0.0*
 
-Tu peux alors **installer nvm**.  Début mars 2016, la dernière version est la 0.31, ça donne ça :
+Tu peux alors **installer nvm**.  Au 23 octobre 2017, la dernière version est la 0.33.4, ça donne ça :
 
 ```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash
 ```
 
 Note que cette même commande assurera la **mise à jour** de nvm aussi, si besoin.
 
-Ouvre un nouveau terminal (<kbd>Cmd+T</kbd> ouvrira un nouvel onglet), puis liste les versions disponibles avec `nvm ls-remote`.  Il y en a **une tonne**, alors tu peux choisir de limiter aux 4.x à 6.x, par exemple :
+Ouvre un nouveau terminal (<kbd>Cmd+T</kbd> ouvrira un nouvel onglet), puis liste les versions disponibles avec `nvm ls-remote`.  Il y en a **une tonne**, alors tu peux choisir de limiter aux 6.x et 8.x, par exemple :
 
 ```
-$ nvm ls-remote 'v[456]*'
-         v4.0.0
-         v4.1.0
-         v4.1.1
-         v4.1.2
-         v4.2.0
-         v4.2.1
-         v4.2.2
-         v4.2.3
-         v4.2.4
-         v4.2.5
-         v4.2.6
-         v4.3.0
-         v4.3.1
-         v4.3.2
-         v5.0.0
-         v5.1.0
-         v5.1.1
-         v5.2.0
-         v5.3.0
-         v5.4.0
-         v5.4.1
-         v5.5.0
-         v5.6.0
-         v5.7.0
-         v5.7.1
+$ nvm ls-remote 'v[68]*'
+         v6.0.0
+…
+         v6.11.4   (Latest LTS: Boron)
+…
+         v8.6.0
+->       v8.7.0
 $
 ```
 
 Tu peux installer une version avec `nvm install` :
 
 ```
-$ nvm install v5.7.1
+$ nvm install v8.7.0
 ######################################################################## 100.0%
 Checksums empty
-Now using node v5.7.1
+Now using node v8.7.0
 $
 ```
 
 Et même en faire la version par défaut, si tu veux :
 
 ```
-$ nvm alias default v5.7.1
-default -> v5.7.1
+$ nvm alias default v8.7.0
+default -> v8.7.0
 $
 ```
 
@@ -165,17 +145,21 @@ Par exemple, le `nvm ls` de Christophe dit ça, là tout de suite :
 $ nvm ls
        v0.10.38
         v0.12.7
-         v4.2.6
-->       v5.7.1
+         v4.8.4
+        v6.11.4
+         v7.9.0
+->       v8.7.0
          system
-default -> v5.7.1
-node -> stable (-> v4.2.6) (default)
-stable -> 4.2 (-> v4.2.6) (default)
-unstable -> 5.7 (-> v5.7.1) (default)
+default -> 8 (-> v8.7.0)
+node -> stable (-> v8.7.0) (default)
+stable -> 8.7 (-> v8.7.0) (default)
 iojs -> iojs- (-> system) (default)
+lts/* -> lts/boron (-> v6.11.4)
+lts/argon -> v4.8.4 (-> v4.8.4)
+lts/boron -> v6.11.4 (-> v6.11.4)
 ```
 
-Pour finir, assure-toi ensuite [d’avoir npm 3.7 au minimum](#utiliser-le-dernier-npm).
+Pour finir, assure-toi ensuite [d’avoir npm 5.3 au minimum](#utiliser-le-dernier-npm).
 
 ## Sur Linux
 
@@ -183,21 +167,21 @@ Comme toujours avec Linux, **ça dépend de ta distro**.  L’immense majorité 
 
 ### Option 1 : paquets officiels
 
-> **Info** [NodeSource](https://nodesource.com/) maintient des paquets officiels à jour pour l’univers Debian et les “Enterprise Linux”.  Il faut choisir sa version de base, cependant (4.x ou 5.x, début mars 2016, plus les 0.12, 0.10 et io.js 1–3 par souci de rétrocompatibilité).  Pour le reste, ça sent la compilation des sources…
+> **Info** [NodeSource](https://nodesource.com/) maintient des paquets officiels à jour pour l’univers Debian et les “Enterprise Linux”, ce qui facilite énormément la tenue à jour par rapport aux paquets des distros, souvent obsolètes…
 
-#### Sur Debian / Ubuntu / Mint
+#### Sur Debian / Ubuntu / Mint / WSL
 
-Une fois choisie ta version de base, tu configures les sources adaptées via le bon script en ligne, puis installe le paquet (qui s’appelle toujours `nodejs`).[Les instructions détaillées sont ici](https://github.com/nodesource/distributions#debian-and-ubuntu-based-distributions), mais voici un exemple pour Node 5.x :
+Une fois choisie ta version de base (ex. 8.x), tu configures les sources adaptées via le bon script en ligne, puis installe le paquet (qui s’appelle toujours `nodejs`).[Les instructions détaillées sont ici](https://github.com/nodesource/distributions#debian-and-ubuntu-based-distributions), mais voici un exemple pour Node 8.x :
 
 ```
-# Sur Ubuntu / Mint :
+# Sur Ubuntu / Mint / WSL :
 
-$ curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 
 # Sur Debian (en root dès le départ) :
 
-$ curl -sL https://deb.nodesource.com/setup_5.x | bash -
+$ curl -sL https://deb.nodesource.com/setup_8.x | bash -
 $ apt-get install -y nodejs
 ```
 
@@ -209,14 +193,14 @@ $ sudo apt-get install -y build-essential
 
 Mais n’oublie pas : tu as aussi [l’approche nvm](#option-3--nvm) !
 
-Pour finir, assure-toi ensuite [d’avoir npm 3.7 au minimum](#utiliser-le-dernier-npm).
+Pour finir, assure-toi ensuite [d’avoir npm 5.3 au minimum](#utiliser-le-dernier-npm).
 
 #### Sur les “enterprise Linux” (Fedora, Red Hat (RHEL), CentOS, CloudLinux)
 
 Une fois choisie ta version de base, tu configures les sources adaptées via le bon script en ligne, puis installe le paquet (qui s’appelle toujours `nodejs`).[Les instructions détaillées sont ici](https://github.com/nodesource/distributions#enterprise-linux-based-distributions), mais voici un exemple pour Node 5.x :
 
 ```
-curl -sL https://rpm.nodesource.com/setup_5.x | bash -
+curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 ```
 
 Puis en `root` :
@@ -236,21 +220,21 @@ yum install gcc-c++ make
 yum groupinstall 'Development Tools'
 ```
 
-Pour finir, assure-toi ensuite [d’avoir npm 3.7 au minimum](#utiliser-le-dernier-npm).
+Pour finir, assure-toi ensuite [d’avoir npm 5.3 au minimum](#utiliser-le-dernier-npm).
 
 ### Option 2 : compilation des sources
 
 Si tu utilises un autre distro, tu peux toujours [récupérer les sources](https://nodejs.org/en/download/), les décompresser puis les compiler.  Note qu’il te faudra d’abord :
 
-* Un compilo (GCC ou G++ 4.8 ou ultérieur)
-* Un lieur (CLANG ou CLANG++ 3.4 ou ultérieur)
+* Un compilo (GCC et G++ 4.9.4 ou ultérieurs)
+* Un lieur (CLANG et CLANG++ 3.4.2 ou ultérieurs)
 * Python 2.6 et 2.7
 * GNU Make 3.81 ou ultérieur
 * Sur les BSD, `libexecinfo`
 
 ```
 $ ./configure
-$ make
+$ make -j4
 $ sudo make install
 ```
 
@@ -258,7 +242,7 @@ Mais bon, franchement, snif.
 
 ### Option 3 : NVM
 
-Sur Debian, Ubuntu et Mint, tu peux jouer entre différentes versions grâce à [nvm](https://github.com/creationix/nvm#readme).
+Sur Debian, Ubuntu, Mint et WSL, tu peux jouer entre différentes versions grâce à [nvm](https://github.com/creationix/nvm#readme).
 
 NVM signifie *Node Version Manager*, et permet **d’installer rapidement toute version connue**, et de basculer d’une version à l’autre en fonction du projet.  Voici comment procéder.
 
@@ -268,42 +252,42 @@ Il faut déjà **avoir un compilateur** disponible sur la machine, ce qui est un
 $ sudo apt-get install -y build-essential libssl-dev
 ```
 
-Tu peux alors **installer nvm**.  Début mars 2016, la dernière version est la 0.31, ça donne ça :
+Tu peux alors **installer nvm**.  Au 23 octobre 2017, la dernière version est la 0.33.4, ça donne ça :
 
 ```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash
 ```
 
 Note que cette même commande assurera la **mise à jour** de nvm aussi, si besoin.
 
-Ouvre un nouveau shell puis liste les versions disponibles avec `nvm ls-remote`.  Il y en a **une tonne**, alors tu peux choisir de limiter aux 4.x à 6.x, par exemple :
+Ouvre un nouveau terminal (<kbd>Cmd+T</kbd> ouvrira un nouvel onglet), puis liste les versions disponibles avec `nvm ls-remote`.  Il y en a **une tonne**, alors tu peux choisir de limiter aux 6.x et 8.x, par exemple :
 
 ```
-$ nvm ls-remote 'v[456]*'
-         v4.0.0
-         …
-         v4.3.2
-         v5.0.0
-         …
-         v5.7.1
+$ nvm ls-remote 'v[68]*'
+         v6.0.0
+…
+         v6.11.4   (Latest LTS: Boron)
+…
+         v8.6.0
+->       v8.7.0
 $
 ```
 
 Tu peux installer une version avec `nvm install` :
 
 ```
-$ nvm install v5.7.1
+$ nvm install v8.7.0
 ######################################################################## 100.0%
 Checksums empty
-Now using node v5.7.1
+Now using node v8.7.0
 $
 ```
 
 Et même en faire la version par défaut, si tu veux :
 
 ```
-$ nvm alias default v5.7.1
-default -> v5.7.1
+$ nvm alias default v8.7.0
+default -> v8.7.0
 $
 ```
 
@@ -313,21 +297,27 @@ Par exemple, le `nvm ls` de Christophe dit ça, là tout de suite :
 $ nvm ls
        v0.10.38
         v0.12.7
-         v4.2.6
-->       v5.7.1
+         v4.8.4
+        v6.11.4
+         v7.9.0
+->       v8.7.0
          system
-default -> v5.7.1
-node -> stable (-> v4.2.6) (default)
-stable -> 4.2 (-> v4.2.6) (default)
-unstable -> 5.7 (-> v5.7.1) (default)
+default -> 8 (-> v8.7.0)
+node -> stable (-> v8.7.0) (default)
+stable -> 8.7 (-> v8.7.0) (default)
 iojs -> iojs- (-> system) (default)
+lts/* -> lts/boron (-> v6.11.4)
+lts/argon -> v4.8.4 (-> v4.8.4)
+lts/boron -> v6.11.4 (-> v6.11.4)
 ```
+
+Pour finir, assure-toi ensuite [d’avoir npm 5.3 au minimum](#utiliser-le-dernier-npm).
 
 ## Utiliser le dernier npm
 
-Par « npm », on désigne à la fois l’outil disponible sur nos machines et le référentiel central en ligne de modules utilisables.  C’est l’écosystème le plus vivace toutes technos confondues, avec près de **250 000 modules** début mars 2016, et plus de [400 nouveaux modules tous les jours](http://www.modulecounts.com/) !  Le référentiel est utilisé pour plus de **3,5 <u>milliards</u> de téléchargements par mois**.  Imaginez un peu ; et ça ne fait qu’augmenter…
+Par « npm », on désigne à la fois l’outil disponible sur nos machines et le référentiel central en ligne de modules utilisables.  C’est l’écosystème le plus vivace toutes technos confondues, avec quelque **580 000 modules** en octobre 2017 (téléchargés plus de *3 milliards de fois par semaine*), et plus de [500 nouveaux modules tous les jours](http://www.modulecounts.com/) !  Imaginez un peu ; et ça ne fait qu’augmenter…
 
-> **Info** « npm » ne signifie pas “Node Package Manager”, comme beaucoup le croient, mais “Node Packaged Modules”, et s’écrit toujours en minuscules.
+> **Info** « npm » ne signifie pas “Node Package Manager”, comme beaucoup le croient, mais “Node Packaged Modules”, et s’écrit toujours en minuscules.  Ceci dit, npm Inc. s’amuse à fournir une signification différente à chaque rafraîchissement de page sur leur site 😉…
 
 Avant sa version 3, l’outil `npm` installait ses modules sous forme d’une **arborescence récursive** sur le disque, ce qui pouvait vite entraîner des **chemins très longs** et ne facilitait pas le **dédoublonnement** des versions identiques et la **montée automatique en version compatible**.
 
@@ -335,7 +325,9 @@ C’était particulièrement un **problème sur Windows**, qui limite ses chemin
 
 À partir de la **version 3**, les dépendances sont toujours analysées et traitées récursivement, et on est toujours garantis sans conflits de versions locales, mais les modules sont **déposés à plat sur le disque**, ce qui réduit considérablement les tailles de chemin, et facilite grandement la vie à Windows, en plus de réduire la place occupée en **dédoublonnant automatiquement** et de facilier la montée automatique en version compatible.
 
-Cependant, les version 3.0 à 3.6 avaient de **sacrés soucis de lenteur**.  La 3.7 a commencé à bien corriger le tir.
+Cependant, les version 3.0 à 3.6 avaient de **sacrés soucis de lenteur**.  La 3.7 a commencé à bien corriger le tir.  Et ça n’a cessé de s’améliorer depuis : **chaque version de npm, même mineure, améliore les perfs et les fonctionnalités disponibles.**  Ainsi, la 5 a mis en place tout plein de trucs géniaux (gestion offline, `package-lock.json`…) et la 5.2 a introduit le très pratique outil [`npx`](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b).
+
+Par ailleurs, le dernier `npm` est garanti disponible sur les versions récentes des branches LTS en vigueur (maintenance ou active) et du stable en vigueur.  Ainsi, au 23 octobre 2017, tu es sûr·e de pouvoir utiliser npm 5.5.1 sur Node 4.8.4 (LTS maintenance), 6.11.4 (LTS active) et 8.7.0 (stable)… et en pratique, elle marche sur beaucoup plus de versions (récentes) que ça…
 
 Assure-toi donc d’avoir **le tout dernier npm**, quelle que soit ta version de Node, en utilisant npm pour **se mettre à jour lui-même** (meta !) :
 
@@ -345,10 +337,10 @@ $ npm install -g npm@latest
 
 > **Caution** Si tu es sur un Node global sur Linux ou OSX, sans avoir les droits sur `/usr/local`, tu devras faire cette commande en `sudo`.
 
-Vérifie que tu es au moins en 3.7 :
+Vérifie que tu es au moins en 5.3 :
 
 ```
 $ npm -v
-3.7.5
+5.5.1
 $
 ```

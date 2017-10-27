@@ -2,18 +2,18 @@
 
 ## C’est quoi MongoDB ?
 
-[MongoDB](https://www.mongodb.org/) est une **base de données [NoSQL](https://www.mongodb.com/nosql-explained)** parmi les plus populaires du monde (le principal concurrent étant CouchDB).
+[MongoDB](https://www.mongodb.com/) est une **base de données [NoSQL](https://www.mongodb.com/nosql-explained)** parmi les plus populaires du monde (le principal concurrent étant CouchDB).
 
 On s’en sert pour la persistance de nos données dans la [formation Node.js](../trainings/node.md).
 
 ## Sur Windows
 
-[Le guide officiel](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/) est très bien fait, mais en voici le résumé.
+[Le guide officiel](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/) est très bien fait, mais en voici le résumé.
 
-On va faire l’impasse sur les Windows Server, en supposant que la machine que amènes utilise un Windows 7 ou ultérieur.
+On va faire l’impasse sur les Windows Server, en supposant que la machine que tu amènes utilise un Windows 7 ou ultérieur.
 
 1. **Détermine si tu es en 32-bit ou 64-bit**.  Tu peux être sûr-e rapidement en lançant la commande suivante dans l’Invite de Commande : `wmic os get osarchitecture`.  Note que MongoDB ne fournira bientôt plus de versions 32-bit.
-2. [Télécharge la version appropriée](https://www.mongodb.org/downloads) : *Windows 64-bit 2008 R2+** pour du 64-bit, *Windows 32-bit* dans le cas contraire.  Ça affiche un formulaire après, mais tu n’as pas à le remplir : attends simplement la fin du téléchargement.
+2. [Télécharge la version appropriée](https://www.mongodb.com/download-center#community) : *Windows Server 2008 R2 64-bit** pour du 64-bit, ou [la 32-bit de la 3.2.17](https://www.mongodb.com/download-center#previous) dans le cas contraire.  Ça affiche un formulaire après, mais tu n’as pas à le remplir : attends simplement la fin du téléchargement.
 3. Lance le fichier `.msi` téléchargé.  **Attention, pour te faciliter la vie** et suivre les recommandations de MongoDB, **on va simplifier le chemin** d’installation à `C:\mongodb` (ou sur un autre lecteur si tu n’as pas de place dans `C:\`).
 4. Accepte la licence
 5. **Choisis le mode *Custom***
@@ -78,9 +78,9 @@ Le client se termine en tapant <kbd>Ctrl+D</kbd> ou en utilisant la commande `ex
 
 ### Option 1 : Homebrew (recommandé)
 
-Même MongoDB [recommande](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/#install-mongodb-community-edition) de recourir à **Homebrew** plutôt qu’à une installation manuelle.
+Même MongoDB [recommande](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/#install-mongodb-community-edition-with-homebrew) de recourir à **Homebrew** plutôt qu’à une installation manuelle.
 
-[Homebrew](http://brew.sh/) est **indispensable pour tous les développeurs utilisant OSX**.  C’est un gestionnaire de paquets qui nous donne accès, facilement et de façon homogène, à la grande majorité des outils Linux / Unix, qu’il s’agisse d’outils « clients », comme Git, ou serveurs, comme MySQL, PostgreSQL, MongoDB, Redis ou que sais-je encore…
+[Homebrew](https://brew.sh/) est **indispensable pour tous les développeurs utilisant OSX**.  C’est un gestionnaire de paquets qui nous donne accès, facilement et de façon homogène, à la grande majorité des outils Linux / Unix, qu’il s’agisse d’outils « clients », comme Git, ou serveurs, comme MySQL, PostgreSQL, MongoDB, Redis ou que sais-je encore…
 
 Homebrew nécessite Ruby pour s’installer, mais ce n’est pas un souci vu qu’un Ruby suffisamment récent fait partie d’OSX depuis très longtemps.
 
@@ -154,7 +154,7 @@ local   0.078GB
 
 ### Option 2 : Installation manuelle
 
-Tu ne devrais pas avoir besoin, mais si tu insistes, [les instructions sont ici](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/#install-mongodb-community-edition-manually) (ça ressemble pas mal à ce qu’on fait sur Windows, mais sans installeur officiel).
+Tu ne devrais pas avoir besoin, mais si tu insistes, [les instructions sont ici](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/#install-mongodb-community-edition-manually) (ça ressemble pas mal à ce qu’on fait sur Windows, mais sans installeur officiel).
 
 ## Sur Linux
 

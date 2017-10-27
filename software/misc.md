@@ -2,7 +2,7 @@
 
 Cette section liste quelques petits logiciels qu’on trouve super pratiques au quotidien, mais qui n’ont absolument rien d’obligatoire pour nos formations.  Certains sont gratuits, d’autres payants…  Et comme nous sommes exclusivment sur OSX, certains ne sont *que* sur OSX.  Simples conseils !
 
-## ![](../images/logo-alfred.png) Alfred 2
+## ![](../images/logo-alfred.png) Alfred
 
 <p class="software-info">OSX • Base gratuite, Powerpack payant</p>
 
@@ -14,11 +14,11 @@ Cette section liste quelques petits logiciels qu’on trouve super pratiques au 
 
 [Divvy](http://mizage.com/divvy/) est notre façon préférée d’organiser nos fenêtres sur OSX et [Windows](http://mizage.com/windivvy/).  Définis des raccourcis globaux et locaux pour n’importe quel positionnement de fenêtre, avec des gestions de grilles fines, la gestion du multi-écran, etc.  Indispensable en tant que formateur, et très utile en général !
 
-## ![](../images/logo-flux.png) F.lux
+## ![](../images/logo-flux.png) f.lux
 
 <p class="software-info">OSX, Windows, Linux, jailbroken iOS • Gratuit</p>
 
-[F.lux](https://justgetflux.com/) sauve tes yeux et tes nuits en adaptant automatiquement la témpérature colorimétrique de ton écran au fil de la soirée, à partir de la tombée de la nuit, pour t’éviter la lumière bleue trop forte dans les yeux le soir (ou dans l’obscurité), qui fatigue tes yeux et rend difficile l’endormissement.  Demande à n’importe qui l’utilisant : l’essayer, c’est l’adopter !
+[f.lux](https://justgetflux.com/) sauve tes yeux et tes nuits en adaptant automatiquement la témpérature colorimétrique de ton écran au fil de la soirée, à partir de la tombée de la nuit, pour t’éviter la lumière bleue trop forte dans les yeux le soir (ou dans l’obscurité), qui fatigue tes yeux et rend difficile l’endormissement.  Demande à n’importe qui l’utilisant : l’essayer, c’est l’adopter !
 
 ## ![](../images/logo-caffeine.png) Caffeine
 
@@ -56,8 +56,8 @@ Note qu’îl y a des équivalents Linux et Windows, mais on ne saurait pas trop
 
 Il y a plein d’équivalents Linux et Windows, mais là-aussi, je te laisse chercher…
 
-## ![](../images/logo-robomongo.png) Robomongo
+## ![](../images/logo-robomongo.png) Robo 3T (anciennement Robomongo)
 
 <p class="software-info">OSX, Windows, Linux • Gratuit</p>
 
-[Robomongo](https://robomongo.org/) est sans doute la meilleure GUI pour MongoDB à ce jour.  Financé partiellement en participatif, il est disponible sur OSX, Windows et Linux, gratuitement (des abonnements payants permettent un accès plus rapide aux nouvelles versions et davantage de support).
+[Robo 3T](https://robomongo.org/) est sans doute la meilleure GUI pour MongoDB à ce jour.  Financé partiellement en participatif, il est disponible sur OSX, Windows et Linux, gratuitement (des abonnements payants permettent un accès plus rapide aux nouvelles versions et davantage de support).
