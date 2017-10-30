@@ -10,7 +10,7 @@ Toutefois, « ST » est le fruit du travail d’une personne, pour l’essenti
 
 Dans l’intervalle, Atom est sorti, qui reprend tous les bons points de ST mais est par ailleurs un logiciel open-source avec beaucoup plus de possibilités pour ses plugins. L’inconvénient est qu’il reste un peu lent, et crashe parfois de façon inexplicable.  Qui plus est, même dans sa toute dernière version, « Atom IDE », il n’offre pas une proposition de valeur forte pour le développement web et Node.
 
-C’est dans ce paysage assez concurrentiel qu’a débarqué Visual Studio Code, un projet **open-source** piloté par Microsoft, à ne pas confondre avec leur mammouth propriétaire, Visual Studio tout court.  « Code » est un éditeur, pas un EDI, même s’il en a les caractéristiques principales grâce à diverses fonctionnalités intégrées et à des extensions populaires.
+C’est dans ce paysage assez concurrentiel qu’a débarqué Visual Studio Code, un projet **open-source** piloté par Microsoft, à ne pas confondre avec leur mammouth propriétaire, Visual Studio tout court.  «Code» est un éditeur, pas un EDI, même s’il en a les caractéristiques principales grâce à diverses fonctionnalités intégrées et à des extensions populaires.
 
 ## Les principaux avantages de Code
 
@@ -71,7 +71,7 @@ Voici le détail des extensions ainsi recommandées :
 |-
 |[advanced-new-file](https://marketplace.visualstudio.com/items?itemName=patbenatar.advanced-new-file)<br>`patbenatar.advanced-new-file`|Permet de créer facilement, au clavier, de nouveaux fichiers et leurs dossiers conteneurs, histoire d’avoir directement la bonne coloration syntaxique en prime.|
 |[Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)<br>`formulahendry.auto-close-tag`|Ferme automatiquement les balises (fermer l’ouvrante crée la fermante, et faire le `/` d’une auto-fermante ajoute le `>` final)|
-|[Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)<br>`formulahendry.auto-rename-tag`|Synchronise automatiquement la balise opposée lors de la modification d’une basise ouvrante/fermante|
+|[Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)<br>`formulahendry.auto-rename-tag`|Synchronise automatiquement la balise opposée lors de la modification d’une balise ouvrante/fermante|
 |[Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)<br>`msjsdiag.debugger-for-chrome`|Permet de débogueur du JS exécuté dans Chrome, au sein de VS Code (existe aussi pour Firefox et Edge)|
 |[ECMAScript Quotes Transformer](https://marketplace.visualstudio.com/items?itemName=vilicvane.es-quotes)<br>`vilicvane.es-quotes`|Facilite la bascule entre les 3 types de délimiteurs de `String` (`'`, `"` et <tt>`</tt>)|
 |[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)<br>`dbaeumer.vscode-eslint`|Le *linter* incontournable pour analyser à la volée nos codes sources et nous signaler tout problème potentiel|
