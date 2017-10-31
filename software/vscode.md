@@ -37,7 +37,29 @@ Comme toujours avec un nouvel éditeur, toute la difficulté consiste à rapidem
 
 ### En mode express
 
-Si tu préfères faire au plus vite, nous avons mis en place un [petit dépôt GitHub](https://github.com/deliciousinsights/vscode-setup) qui te permet d’automatiser la configuration de ton VS Code et l’installation de nos extensions recommandées.
+Nous avons mis en place un [petit dépôt GitHub](https://github.com/deliciousinsights/vscode-setup) qui te permet d’automatiser la configuration de ton VS Code et l’installation de nos extensions recommandées.
+
+Il te faudra quand même [Node](./node.md) installé sur la machine (suis ce liens pour les installer au mieux, si besoin). Une version 8.2+ est souhaitable, pour avoir npm 5.2+ d’office, mais à défaut, pense juste à mettre à jour ton npm comme ceci (éventuellement préfixé de `sudo` si besoin sur Linux ou OSX) :
+
+```bash
+npm install -g npm@latest
+```
+
+Si tu as npm 5.2+, c’est super simple ensuite :
+
+```bash
+npx vscode-setup
+```
+
+Note que si tu as déjà fait ça par le passé, et veux garantir le recours à la dernière version publiée, tu peux ajuster ton appel comme suit :
+
+```bash
+npx --ignore-existing vscode-setup
+```
+
+### En mode rapide (mais moins)
+
+Si tu préfères garder un peu la main sur ce qui se passe, voici de quoi aller moins vite.
 
 Il te faudra de toutes façons [Node](./node.md) et idéalement [Git](./git.md) installés sur la machine (suis ces liens pour les installer au mieux, si besoin).
 
