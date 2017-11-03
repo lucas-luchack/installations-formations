@@ -110,6 +110,7 @@ Voici le détail des extensions ainsi recommandées :
 |[REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)<br>`humao.rest-client`|La meilleure manière de tester interactivement des requêtes HTTP de toutes sortes|
 |[Search node_modules](https://marketplace.visualstudio.com/items?itemName=jasonnutter.search-node-modules)<br>`jasonnutter.search-node-modules`|Permet de laisser `node_modules` ignoré (et donc ne polluant pas <kbd>Ctrl+P</kbd>) mais de chercher néanmoins facilement, si besoin, dans les modules installés|
 |[Subword navigation](https://marketplace.visualstudio.com/items?itemName=ow.vscode-subword-navigation)<br>`ow.vscode-subword-navigation`|Modifie les déplacements/sélections de mots pour fonctionner par sous-partie dans les identifiants composés (ex. `camelCase` aura `camel` et `Case`), très pratique pour ne sélectionner facilement qu’une partie de l’identifiant (pour la supprimer/modifier, par exemple)|
+|[TypeScript Hero](https://marketplace.visualstudio.com/items?itemName=rbbit.typescript-hero)<br>`rbbit.typescript-hero`|On s’en sert surtout pour sa gestion intelligente des imports (insertion automatique, tri / organisation, etc.)|
 |[VSCode Great Icons](https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icon)<br>`emmanuelbeziat.vscode-great-icon`|Un thème d’icônes nettement plus détaillé / spécialisé que les autres, idéal pour le développement JS|
 
 Nous t’invitons en revanche, au moins pour les projets de nos formations, à désactiver les extensions « concurrentes » qui risquent de marcher sur les pieds des nôtres, notamment en termes de formatage ou de *linting*.  Une fois le projet ouvert, il suffit de cliquer sur l’icône de paramètres (une roue dentée) de l’extension et de choisir *Disable (Workspace)* dans le menu déroulant. On pense notamment à :
@@ -186,7 +187,20 @@ Voici le genre de choses qu’on propose sur les projets :
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+
+  // TypeScript Hero (auto-imports & import sorting)
+  "typescriptHero.resolver.disableImportRemovalOnOrganize": true,
+  "typescriptHero.resolver.importGroups": [
+    "Modules",
+    "/material-ui/",
+    "Plains",
+    "Workspace"
+  ],
+  "typescriptHero.resolver.insertSemicolons": false,
+  "typescriptHero.resolver.multiLineWrapThreshold": 80,
+  "typescriptHero.resolver.organizeOnSave": true,
+  "typescriptHero.resolver.resolverMode": "ES6"
 }
 ```
 
