@@ -11,5 +11,6 @@
     - [Git](software/git.md)
     - [Node & npm](software/node.md)
     - [Visual Studio Code & extensions](software/vscode.md)
+        - [Snippets utiles](software/vscode-snippets.md)
     - [MongoDB](software/mongodb.md)
     - [Divers](software/misc.md)

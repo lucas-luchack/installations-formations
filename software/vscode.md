@@ -247,3 +247,9 @@ Les [docs officielles](https://code.visualstudio.com/docs) regorgent de trucs ut
 
 - [Getting started](https://code.visualstudio.com/docs), qui reprend des contenus cités plus haut mais en ajoute plein d’autres (thèmes, changement de la langue de l’éditeur, etc.)
 - [User guide](https://code.visualstudio.com/docs/editor/codebasics), qui reprend pas à pas les points forts de Code, démos et illustrations à l’appui. On y trouve notamment des sujets avancés commes les *multi-root workspaces*.
+
+### Les snippets installés par les extensions
+
+Les extensions recommandées fournissent pas mal de *snippets*, des petits blocs de code associés à des raccourcis qu’on tape suivis de <kbd>Tab</kbd>.  Nous répertorions les principaux, utiles dans le cadre de nos formations, sur une page de ce guide :
+
+[Voir la liste illustrée des snippets utiles](./vscode-snippets.md).
