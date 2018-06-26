@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "start": "gitbook serve",
-    "deploy": "surge --project _book --domain https://installations.delicious-insights.com"
+    "deploy": "netlifyctl deploy"
   },
   "author": "Christophe Porteneuve <christophe@delicious-insights.com>",
   "license": "CC-BY-NC-SA-4.0",
