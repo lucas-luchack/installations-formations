@@ -16,7 +16,7 @@ Cette section liste quelques petits logiciels qu’on trouve super pratiques au 
 
 ## ![](../images/logo-flux.png) f.lux
 
-<p class="software-info">OSX, Windows, Linux, jailbroken iOS • Gratuit</p>
+<p class="software-info">OSX, Windows, Linux, jailbroken iOS • Gratuit<br />Une option similaire à Flux est déjà présente sur Ubuntu (Linux).</p>
 
 [f.lux](https://justgetflux.com/) sauve tes yeux et tes nuits en adaptant automatiquement la témpérature colorimétrique de ton écran au fil de la soirée, à partir de la tombée de la nuit, pour t’éviter la lumière bleue trop forte dans les yeux le soir (ou dans l’obscurité), qui fatigue tes yeux et rend difficile l’endormissement.  Demande à n’importe qui l’utilisant : l’essayer, c’est l’adopter !
 
